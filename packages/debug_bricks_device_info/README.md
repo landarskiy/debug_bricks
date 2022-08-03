@@ -9,23 +9,18 @@ dependencies:
   debug_bricks_device_info: <last_version>
 ```
 
-
 ## Usage
 
 ```dart
-import 'package:debug_bricks_ui/debug_bricks_ui.dart';
+import 'package:debug_bricks_device_info/debug_bricks_device_info.dart';
 
 class DebugScreen extends StatelessWidget {
   const DebugScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextBrick(
-      infoIconData: Icons.devices,
-      actionIconData: Icons.copy,
-      title: 'TextBrick',
-      subtitle: 'Subtitle',
-      onTap: () {},
+    return DeviceInfoBrick(
+      title: 'Device Info',
     );
   }
 }

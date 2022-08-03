@@ -1,0 +1,23 @@
+name: debug_bricks_device_info
+description: Device info UI debug brick
+version: 0.0.1
+homepage: https://github.com/landarskiy/debug_bricks
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.0
+  device_info_plus: ^4.0.1
+  debug_bricks_ui:
+    path: ../debug_bricks_ui
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:

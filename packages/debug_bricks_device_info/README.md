@@ -1,4 +1,4 @@
-Set of UI components that you can use for implementing debug screens.
+UI component which displays information about the device.
 
 ## Getting started
 

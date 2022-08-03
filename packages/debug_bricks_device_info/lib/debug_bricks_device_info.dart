@@ -1,7 +1,3 @@
 library debug_bricks_device_info;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'package:debug_bricks_device_info/src/device_info_brick.dart';

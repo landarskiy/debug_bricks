@@ -1,12 +1,16 @@
+import 'package:debug_bricks_device_info/debug_bricks_device_info.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:debug_bricks_device_info/debug_bricks_device_info.dart';
+import 'utils/ui_utils.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
+  testWidgets('DeviceInfoBrick widget test', (tester) async {
+    await tester.pumpWidgetWithMaterial(
+      DeviceInfoBrick(
+        title: 'T',
+      ),
+    );
+    expect(find.text('T'), findsOneWidget);
+    //TODO finish test
   });
 }

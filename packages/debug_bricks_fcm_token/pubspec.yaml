@@ -1,0 +1,26 @@
+name: debug_bricks_fcm_token
+description: FCM Token UI debug brick
+version: 0.0.1
+homepage: https://github.com/landarskiy/debug_bricks
+
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.0.0
+  firebase_core: ^1.20.0
+  firebase_messaging: ^12.0.1
+  debug_bricks_core:
+    path: ../debug_bricks_core
+  debug_bricks_ui:
+    path: ../debug_bricks_ui
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:

@@ -81,17 +81,20 @@ class SliderBrick extends StatelessWidget {
   ) {
     return ListTile(
       title: title != null ? Text(title) : null,
-      subtitle: Column(children: [
-        if (subtitle != null) Text(subtitle),
-        Slider(
-          min: minValue,
-          max: maxValue,
-          value: value,
-          divisions: divisions,
-          onChanged: changeListener,
-          label: label,
-        )
-      ]),
+      subtitle: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          if (subtitle != null) Text(subtitle),
+          Slider(
+            min: minValue,
+            max: maxValue,
+            value: value,
+            divisions: divisions,
+            onChanged: changeListener,
+            label: label,
+          ),
+        ],
+      ),
       minLeadingWidth: 0,
       leading: iconData != null
           ? Icon(

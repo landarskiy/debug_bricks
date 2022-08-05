@@ -9,10 +9,13 @@ dependencies:
   debug_bricks_ui: <last_version>
 ```
 
-
 ## Components
 
 ### TextBrick
+
+![TextBrick](docs/media/text_light.png)
+
+![TextBrick](docs/media/text_dark.png)
 
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
@@ -35,6 +38,10 @@ class DebugScreen extends StatelessWidget {
 
 ### CheckboxBrick
 
+![CheckboxBrick](docs/media/check_light.png)
+
+![CheckboxBrick](docs/media/check_dark.png)
+
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
 
@@ -54,6 +61,10 @@ class DebugScreen extends StatelessWidget {
 ```
 
 ### RadioBrick
+
+![RadioBrick](docs/media/radio_light.png)
+
+![RadioBrick](docs/media/radio_dark.png)
 
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
@@ -76,6 +87,10 @@ class DebugScreen extends StatelessWidget {
 
 ### SwitchBrick
 
+![SwitchBrick](docs/media/switch_light.png)
+
+![SwitchBrick](docs/media/switch_dark.png)
+
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
 
@@ -95,6 +110,10 @@ class DebugScreen extends StatelessWidget {
 ```
 
 ### SliderBrick
+
+![SliderBrick](docs/media/slider_light.png)
+
+![SliderBrick](docs/media/slider_dark.png)
 
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
@@ -120,6 +139,10 @@ class DebugScreen extends StatelessWidget {
 ```
 
 ### ExpandableBrick
+
+![ExpandableBrick](docs/media/expandable_light.png)
+
+![ExpandableBrick](docs/media/expandable_dark.png)
 
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';

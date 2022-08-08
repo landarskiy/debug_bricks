@@ -1,4 +1,4 @@
-UI component which displays information about the device.
+UI component which display information about the device.
 
 ## Getting started
 
@@ -10,6 +10,10 @@ dependencies:
 ```
 
 ## Usage
+
+![TextBrick](docs/media/device_info_light.png)
+
+![TextBrick](docs/media/device_info_dark.png)
 
 ```dart
 import 'package:debug_bricks_device_info/debug_bricks_device_info.dart';
@@ -25,3 +29,26 @@ class DebugScreen extends StatelessWidget {
   }
 }
 ```
+
+When a user clicks on UI displayed device info will be copied into the clipboard.
+
+## Customization
+
+You can customize output by pass custom `deviceInfoAdapter` instance in `DeviceInfoBrick` 
+instantiation.
+
+```dart
+class CustomDeviceInfoAdapter extends DeviceInfoAdapter {
+  const CustomDeviceInfoAdapter();
+
+  @override
+  String extract(BaseDeviceInfo deviceInfo) {
+    //format data here
+  }
+}
+```
+
+## Dependencies
+
+This package use [device_info_plus](https://pub.dev/packages/device_info_plus) package as a 
+device info source.

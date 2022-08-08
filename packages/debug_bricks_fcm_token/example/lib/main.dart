@@ -1,11 +1,15 @@
 import 'package:debug_bricks_fcm_token/debug_bricks_fcm_token.dart';
 import 'package:example/theme_mode_provider.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'app_theme.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const DemoApp());
 }
 
@@ -24,11 +28,11 @@ class DemoApp extends StatelessWidget {
 
   Widget _buildApp(ThemeModeProvider provider) {
     return MaterialApp(
-      title: 'Debug Bricks Device Info Demo',
+      title: 'Debug Bricks FCM Token Demo',
       theme: lightThemeData,
       darkTheme: darkThemeData,
       themeMode: provider.themeMode,
-      home: const DemoPage(title: 'Debug Bricks Device Info Demo'),
+      home: const DemoPage(title: 'Debug Bricks FCM Token Demo'),
     );
   }
 

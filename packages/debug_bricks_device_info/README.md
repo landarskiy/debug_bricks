@@ -1,5 +1,10 @@
 UI component which display information about the device.
 
+## Dependencies
+
+This package use [device_info_plus](https://pub.dev/packages/device_info_plus) package as a
+device info source.
+
 ## Getting started
 
 Add to your `pubspec.yaml`:
@@ -47,8 +52,3 @@ class CustomDeviceInfoAdapter extends DeviceInfoAdapter {
   }
 }
 ```
-
-## Dependencies
-
-This package use [device_info_plus](https://pub.dev/packages/device_info_plus) package as a 
-device info source.

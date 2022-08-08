@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.touchlane.debugbricks.deviceinfo.example.example">
+    package="com.touchlane.debugbricks.deviceinfo.example">
    <application
         android:label="example"
         android:name="${applicationName}"

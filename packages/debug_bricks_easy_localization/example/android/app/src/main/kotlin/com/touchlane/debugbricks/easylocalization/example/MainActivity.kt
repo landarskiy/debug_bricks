@@ -1,4 +1,4 @@
-package com.touchlane.debugbricks.easylocalization.example.example
+package com.touchlane.debugbricks.easylocalization.example
 
 import io.flutter.embedding.android.FlutterActivity
 

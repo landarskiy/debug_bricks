@@ -1,5 +1,8 @@
 Set of UI components that you can use for implementing debug screens.
 
+Almost all library components (except SliderBrick) are just ListTile wrappers. That means that 
+fof component theming you should follow ListTile theming instructions.
+
 ## Getting started
 
 Add to your `pubspec.yaml`:

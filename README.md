@@ -1,3 +1,5 @@
+![LOGO](docs/media/logo.svg)
+
 Set of UI components for debug screens.
 
 # Components

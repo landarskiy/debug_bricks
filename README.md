@@ -12,9 +12,9 @@ Functional UI component that provides information about device.
 
 ### Platform Support
 
-| Android | iOS |
-| :-----: | :-: |
-|   ✔️    | ✔️  |
+| Android | iOS | MacOS | Web | Linux | Windows |
+| :-----: | :-: | :---: | :-: | :---: | :-----: |
+|   ✔️    | ✔️  |  ✔️   | ✔️  |  ✔️   |   ✔️    |
 
 ### Integration
 
@@ -32,9 +32,9 @@ Functional UI component that displays FCM token.
 
 ### Platform Support
 
-| Android | iOS |
-| :-----: | :-: |
-|   ✔️    | ✔️  |
+| Android | iOS | MacOS | Web |
+| :-----: | :-: | :---: | :-: |
+|   ✔️    | ✔️  |  ✔️   | ✔️  |
 
 ### Integration
 
@@ -54,9 +54,9 @@ package.
 
 ### Platform Support
 
-| Android | iOS |
-| :-----: | :-: |
-|   ✔️    | ✔️  |
+| Android | iOS | MacOS | Web | Linux | Windows |
+| :-----: | :-: | :---: | :-: | :---: | :-----: |
+|   ✔️    | ✔️  |  ✔️   | ✔️  |  ✔️   |   ✔️    |
 
 ### Integration
 
@@ -76,9 +76,9 @@ always can if you feel that this small simplification meets your requirements.
 
 ### Platform Support
 
-| Android | iOS |
-| :-----: | :-: |
-|   ✔️    | ✔️  |
+| Android | iOS | MacOS | Web | Linux | Windows |
+| :-----: | :-: | :---: | :-: | :---: | :-----: |
+|   ✔️    | ✔️  |  ✔️   | ✔️  |  ✔️   |   ✔️    |
 
 ### Integration
 

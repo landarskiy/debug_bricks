@@ -1,11 +1,11 @@
 import 'package:debug_bricks_easy_localization/debug_bricks_easy_localization.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:example/generated/locale_keys.g.dart';
-import 'package:example/theme_mode_provider.dart';
+import 'package:example/theme/app_theme.dart';
+import 'package:example/theme/theme_mode_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'app_theme.dart';
 import 'generated/codegen_loader.g.dart';
 
 const langEn = Locale('en');

@@ -1,6 +1,6 @@
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
-import 'package:example/app_theme.dart';
-import 'package:example/theme_mode_provider.dart';
+import 'package:example/theme/app_theme.dart';
+import 'package:example/theme/theme_mode_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

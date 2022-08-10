@@ -17,9 +17,9 @@ dependencies:
 
 ## Usage
 
-![TextBrick](docs/media/language_control_light.png)
+![TextBrick](doc/media/language_control_light.png)
 
-![TextBrick](docs/media/language_control_dark.png)
+![TextBrick](doc/media/language_control_dark.png)
 
 ```dart
 import 'package:debug_bricks_easy_localization/debug_bricks_easy_localization.dart';

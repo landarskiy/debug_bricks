@@ -16,9 +16,9 @@ dependencies:
 
 ## Usage
 
-![TextBrick](docs/media/device_info_light.png)
+![TextBrick](doc/media/device_info_light.png)
 
-![TextBrick](docs/media/device_info_dark.png)
+![TextBrick](doc/media/device_info_dark.png)
 
 ```dart
 import 'package:debug_bricks_device_info/debug_bricks_device_info.dart';

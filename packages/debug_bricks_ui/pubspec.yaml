@@ -1,7 +1,8 @@
 name: debug_bricks_ui
 description: UI components for debug purposes
 version: 0.0.1
-homepage: https://github.com/landarskiy/debug_bricks
+homepage: https://github.com/touchlane/debug_bricks
+repository: https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui
 
 environment:
   sdk: ">=2.17.6 <3.0.0"

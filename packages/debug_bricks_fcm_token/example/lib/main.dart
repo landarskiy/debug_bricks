@@ -1,11 +1,11 @@
 import 'package:debug_bricks_fcm_token/debug_bricks_fcm_token.dart';
-import 'package:example/theme_mode_provider.dart';
+import 'package:example/theme/theme_mode_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'app_theme.dart';
 import 'firebase_options.dart';
+import 'theme/app_theme.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

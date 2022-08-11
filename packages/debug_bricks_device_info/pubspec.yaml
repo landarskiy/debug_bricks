@@ -13,14 +13,16 @@ dependencies:
     sdk: flutter
   provider: ^6.0.0
   device_info_plus: ^4.0.1
-  debug_bricks_core:
-    path: ../debug_bricks_core
-  debug_bricks_ui:
-    path: ../debug_bricks_ui
+  debug_bricks_core: ^0.0.1
+  debug_bricks_ui: ^0.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  debug_bricks_core_local:
+    path: ../debug_bricks_core
+  debug_bricks_ui_local:
+    path: ../debug_bricks_ui
 
 flutter:

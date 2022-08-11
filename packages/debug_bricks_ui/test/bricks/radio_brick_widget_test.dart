@@ -2,7 +2,7 @@ import 'package:debug_bricks_ui/debug_bricks_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../utils/ui_utils.dart';
+import '../util/ui_util.dart';
 
 void main() {
   testWidgets('RadioBrick widget test', (tester) async {

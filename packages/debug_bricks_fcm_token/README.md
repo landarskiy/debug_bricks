@@ -16,9 +16,9 @@ dependencies:
 
 ## Usage
 
-![TextBrick](doc/media/fcm_token_light.png)
+![TextBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_fcm_token/doc/media/fcm_token_light.png)
 
-![TextBrick](doc/media/fcm_token_dark.png)
+![TextBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_fcm_token/doc/media/fcm_token_dark.png)
 
 ```dart
 import 'package:debug_bricks_fcm_token/debug_bricks_fcm_token.dart';

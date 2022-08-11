@@ -16,9 +16,9 @@ dependencies:
 
 ### TextBrick
 
-![TextBrick](doc/media/text_light.png)
+![TextBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/text_light.png)
 
-![TextBrick](doc/media/text_dark.png)
+![TextBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/text_dark.png)
 
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
@@ -41,9 +41,9 @@ class DebugScreen extends StatelessWidget {
 
 ### CheckboxBrick
 
-![CheckboxBrick](doc/media/check_light.png)
+![CheckboxBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/check_light.png)
 
-![CheckboxBrick](doc/media/check_dark.png)
+![CheckboxBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/check_dark.png)
 
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
@@ -65,9 +65,9 @@ class DebugScreen extends StatelessWidget {
 
 ### RadioBrick
 
-![RadioBrick](doc/media/radio_light.png)
+![RadioBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/radio_light.png)
 
-![RadioBrick](doc/media/radio_dark.png)
+![RadioBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/radio_dark.png)
 
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
@@ -90,9 +90,9 @@ class DebugScreen extends StatelessWidget {
 
 ### SwitchBrick
 
-![SwitchBrick](doc/media/switch_light.png)
+![SwitchBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/switch_light.png)
 
-![SwitchBrick](doc/media/switch_dark.png)
+![SwitchBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/switch_dark.png)
 
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
@@ -114,9 +114,9 @@ class DebugScreen extends StatelessWidget {
 
 ### SliderBrick
 
-![SliderBrick](doc/media/slider_light.png)
+![SliderBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/slider_light.png)
 
-![SliderBrick](doc/media/slider_dark.png)
+![SliderBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/slider_dark.png)
 
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
@@ -143,9 +143,9 @@ class DebugScreen extends StatelessWidget {
 
 ### ExpandableBrick
 
-![ExpandableBrick](doc/media/expandable_light.png)
+![ExpandableBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/expandable_light.png)
 
-![ExpandableBrick](doc/media/expandable_dark.png)
+![ExpandableBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui/doc/media/expandable_dark.png)
 
 ```dart
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';

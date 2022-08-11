@@ -16,9 +16,9 @@ dependencies:
 
 ## Usage
 
-![TextBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_device_info/doc/media/device_info_light.png)
+![TextBrick](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_device_info/doc/media/device_info_light.png)
 
-![TextBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_device_info/doc/media/device_info_dark.png)
+![TextBrick](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_device_info/doc/media/device_info_dark.png)
 
 ```dart
 import 'package:debug_bricks_device_info/debug_bricks_device_info.dart';

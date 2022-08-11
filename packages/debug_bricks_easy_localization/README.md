@@ -17,9 +17,9 @@ dependencies:
 
 ## Usage
 
-![TextBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_easy_localization/doc/media/language_control_light.png)
+![TextBrick](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_easy_localization/doc/media/language_control_light.png)
 
-![TextBrick](https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_easy_localization/doc/media/language_control_dark.png)
+![TextBrick](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_easy_localization/doc/media/language_control_dark.png)
 
 ```dart
 import 'package:debug_bricks_easy_localization/debug_bricks_easy_localization.dart';

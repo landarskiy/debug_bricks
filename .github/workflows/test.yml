@@ -20,14 +20,14 @@ jobs:
       with:
         channel: 'dev' # or: 'dev' or 'beta'
 
+    - name: Actions for debug_bricks_core
+      run: cd packages/debug_bricks_core/
+
     - name: Install packages dependencies
       run: flutter pub get
 
     - name: Analyze the project's Dart code
       run: flutter analyze
-
-    - name: Test Core
-      run: cd packages/debug_bricks_core/
 
     - name: Run tests
       run: flutter test

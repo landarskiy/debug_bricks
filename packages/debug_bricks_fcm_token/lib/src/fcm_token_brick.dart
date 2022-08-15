@@ -5,19 +5,22 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import 'fcm_token_provider.dart';
+import 'fcm_token_provider_factory.dart';
 
 class FcmTokenBrick extends StatelessWidget {
   const FcmTokenBrick({
     Key? key,
     this.title = 'FCM token',
+    @visibleForTesting this.providerFactory = const FcmTokenProviderFactory(),
   }) : super(key: key);
 
   final String title;
+  final FcmTokenProviderFactory providerFactory;
 
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<FcmTokenProvider>(
-      create: (_) => FcmTokenProvider(),
+      create: (_) => providerFactory.newInstance(),
       builder: (context, _) {
         final provider = context.watch<FcmTokenProvider>();
         final token = provider.cachedFcmToken ?? 'UNKNOWN';

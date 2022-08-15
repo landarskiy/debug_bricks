@@ -44,3 +44,5 @@ jobs:
       uses: codecov/codecov-action@v3
       with:
         directory: ./packages/debug_bricks_core/coverage/
+        name: debug_bricks_core
+        path_to_write_report: ./packages/debug_bricks_core/coverage/codecov_report.txt

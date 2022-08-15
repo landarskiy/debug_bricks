@@ -1,0 +1,86 @@
+name: Test
+
+on:
+  push:
+    branches: ['*']
+
+  pull_request:
+    branches: ['*']
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '12.x'
+    - uses: subosito/flutter-action@v2
+      with:
+        channel: 'stable'
+
+    - name: Install packages dependencies
+      run: | 
+        cd ./packages/debug_bricks_core/
+        flutter pub get
+
+    - name: Analyze the project's Dart code
+      run: |
+        cd ./packages/debug_bricks_core/
+        flutter analyze
+
+    - name: Run tests debug_bricks_core
+      run: |
+        cd ./packages/debug_bricks_core/
+        flutter test
+
+    - name: Run tests debug_bricks_ui
+      run: |
+        cd ./packages/debug_bricks_ui/
+        flutter test
+
+    - name: Run tests debug_bricks_device_info
+      run: |
+        cd ./packages/debug_bricks_device_info/
+        flutter test
+
+    - name: Run tests debug_bricks_easy_localization
+      run: |
+        cd ./packages/debug_bricks_easy_localization/
+        flutter test
+
+    - name: Run tests debug_bricks_fcm_token
+      run: |
+        cd ./packages/debug_bricks_fcm_token/
+        flutter test
+
+    - name: Run tests coverage debug_bricks_core
+      run: |
+        cd ./packages/debug_bricks_core/ 
+        flutter test --coverage
+
+    - name: Run tests coverage debug_bricks_ui
+      run: |
+        cd ./packages/debug_bricks_ui/ 
+        flutter test --coverage
+
+    - name: Run tests coverage debug_bricks_device_info
+      run: |
+        cd ./packages/debug_bricks_device_info/ 
+        flutter test --coverage
+
+    - name: Run tests coverage debug_bricks_easy_localization
+      run: |
+        cd ./packages/debug_bricks_easy_localization/ 
+        flutter test --coverage
+
+    - name: Run tests coverage debug_bricks_fcm_token
+      run: |
+        cd ./packages/debug_bricks_fcm_token/ 
+        flutter test --coverage    
+    
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./packages/debug_bricks_core/coverage/lcov.info,./packages/debug_bricks_ui/coverage/lcov.info,./packages/debug_bricks_device_info/coverage/lcov.info,./packages/debug_bricks_easy_localization/coverage/lcov.info,./packages/debug_bricks_fcm_token/coverage/lcov.info

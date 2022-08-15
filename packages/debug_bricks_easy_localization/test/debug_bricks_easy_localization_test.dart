@@ -3,25 +3,15 @@ import 'package:debug_bricks_ui/debug_bricks_ui.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'utils/ui_utils.dart';
 
 late BuildContext _context;
 
-class ContextConsumer extends StatelessWidget {
-  const ContextConsumer({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    _context = context;
-    return const EasyLocalizationBrick(
-      title: 'T',
-    );
-  }
-}
-
 void main() {
   testWidgets('EasyLocalizationBrick widget test', (tester) async {
+    SharedPreferences.setMockInitialValues({});
     await EasyLocalization.ensureInitialized();
     await tester.pumpWidgetWithMaterial(
       const ContextConsumer(),
@@ -45,4 +35,16 @@ void main() {
     expect(adapter.convert(const Locale('en')), 'en');
     expect(adapter.convert(const Locale('en', 'us')), 'en-us');
   });
+}
+
+class ContextConsumer extends StatelessWidget {
+  const ContextConsumer({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    _context = context;
+    return const EasyLocalizationBrick(
+      title: 'T',
+    );
+  }
 }

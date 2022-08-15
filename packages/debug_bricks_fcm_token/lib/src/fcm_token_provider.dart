@@ -6,11 +6,11 @@ import 'package:flutter/foundation.dart';
 import 'fcm_token_source.dart';
 
 class FcmTokenProvider extends ChangeNotifier {
-  final FcmTokenSource fcmTokenSource = FcmTokenSource();
+  final FcmTokenSource _fcmTokenSource = FcmTokenSource();
   late final StreamSubscription<String> _fcmListener;
 
   String? get cachedFcmToken {
-    return fcmTokenSource.cachedFcmToken;
+    return _fcmTokenSource.cachedFcmToken;
   }
 
   FcmTokenProvider() {
@@ -28,7 +28,7 @@ class FcmTokenProvider extends ChangeNotifier {
   }
 
   _loadFcmToken() async {
-    await fcmTokenSource.fcmTokenFuture;
+    await _fcmTokenSource.fcmTokenFuture;
     notifyListeners();
   }
 }

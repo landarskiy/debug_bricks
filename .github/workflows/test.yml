@@ -30,19 +30,57 @@ jobs:
         cd ./packages/debug_bricks_core/
         flutter analyze
 
-    - name: Run tests
+    - name: Run tests debug_bricks_core
       run: |
         cd ./packages/debug_bricks_core/
         flutter test
 
-    - name: Run tests coverage
+    - name: Run tests debug_bricks_ui
+      run: |
+        cd ./packages/debug_bricks_ui/
+        flutter test
+
+    - name: Run tests debug_bricks_device_info
+      run: |
+        cd ./packages/debug_bricks_device_info/
+        flutter test
+
+    - name: Run tests debug_bricks_easy_localization
+      run: |
+        cd ./packages/debug_bricks_easy_localization/
+        flutter test
+
+    - name: Run tests debug_bricks_fcm_token
+      run: |
+        cd ./packages/debug_bricks_fcm_token/
+        flutter test
+
+    - name: Run tests coverage debug_bricks_core
       run: |
         cd ./packages/debug_bricks_core/ 
         flutter test --coverage
+
+    - name: Run tests coverage debug_bricks_ui
+      run: |
+        cd ./packages/debug_bricks_ui/ 
+        flutter test --coverage
+
+    - name: Run tests coverage debug_bricks_device_info
+      run: |
+        cd ./packages/debug_bricks_device_info/ 
+        flutter test --coverage
+
+    - name: Run tests coverage debug_bricks_easy_localization
+      run: |
+        cd ./packages/debug_bricks_easy_localization/ 
+        flutter test --coverage
+
+    - name: Run tests coverage debug_bricks_fcm_token
+      run: |
+        cd ./packages/debug_bricks_fcm_token/ 
+        flutter test --coverage    
     
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
-        directory: ./packages/debug_bricks_core/coverage/
-        name: debug_bricks_core
-        path_to_write_report: ./packages/debug_bricks_core/coverage/codecov_report.txt
+        files: ./packages/debug_bricks_core/coverage/lcov.info,./packages/debug_bricks_ui/coverage/lcov.info,./packages/debug_bricks_device_info/coverage/lcov.info,./packages/debug_bricks_easy_localization/coverage/lcov.info,./packages/debug_bricks_fcm_token/coverage/lcov.info

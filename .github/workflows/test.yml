@@ -38,7 +38,7 @@ jobs:
     - name: Run tests debug_bricks_ui
       run: |
         cd ./packages/debug_bricks_ui/
-        flutter test
+        flutter test ./test/ui_test.dart
 
     - name: Run tests debug_bricks_device_info
       run: |
@@ -48,7 +48,7 @@ jobs:
     - name: Run tests debug_bricks_easy_localization
       run: |
         cd ./packages/debug_bricks_easy_localization/
-        flutter test
+        flutter test ./test/test.dart
 
     - name: Run tests debug_bricks_fcm_token
       run: |
@@ -63,7 +63,7 @@ jobs:
     - name: Run tests coverage debug_bricks_ui
       run: |
         cd ./packages/debug_bricks_ui/ 
-        flutter test --coverage
+        flutter test ./test/ui_test.dart --coverage
 
     - name: Run tests coverage debug_bricks_device_info
       run: |
@@ -73,7 +73,7 @@ jobs:
     - name: Run tests coverage debug_bricks_easy_localization
       run: |
         cd ./packages/debug_bricks_easy_localization/ 
-        flutter test --coverage
+        flutter test ./test/test.dart --coverage
 
     - name: Run tests coverage debug_bricks_fcm_token
       run: |

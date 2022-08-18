@@ -81,6 +81,10 @@ ThemeData buildThemeData(ColorScheme colorScheme) {
       }),
     ),
     listTileTheme: ListTileThemeData(iconColor: colorScheme.primary),
+    chipTheme: ChipThemeData(
+      backgroundColor: colorScheme.surfaceVariant,
+      selectedColor: colorScheme.primary,
+    ),
   );
 }
 

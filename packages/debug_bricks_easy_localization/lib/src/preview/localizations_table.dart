@@ -1,9 +1,13 @@
 import 'package:debug_bricks_easy_localization/src/preview/internal/localizations_provider.dart';
-import 'package:debug_bricks_easy_localization/src/preview/internal/table_controls.dart';
 import 'package:debug_bricks_easy_localization/src/preview/internal/table_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'internal/table_controls.dart';
+
+/// Widget which displays key:value information for selected locale.
+/// This widget is based on easy_localization package data format but
+/// potentially can be used separately.
 class LocalizationsTable extends StatelessWidget {
   final Map<String, Map<String, dynamic>> mapLocales;
   final ResourcesProvider resourcesProvider;
@@ -97,6 +101,7 @@ class LocalizationsTable extends StatelessWidget {
   }
 }
 
+/// Class that provides the possibility to override the displayed text.
 class ResourcesProvider {
   const ResourcesProvider();
 

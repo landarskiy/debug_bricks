@@ -34,7 +34,11 @@ class TableControls extends StatelessWidget {
       children: [
         Container(
           padding: const EdgeInsets.all(8),
-          child: _buildLangControls(context),
+          child: LanguageSelector(
+            locales: locales,
+            selectedLocale: selectedLocale,
+            selectionCallback: selectionCallback,
+          ),
         ),
         DecoratedBox(
           decoration: BoxDecoration(color: theme.colorScheme.surfaceVariant),
@@ -52,16 +56,29 @@ class TableControls extends StatelessWidget {
       ],
     );
   }
+}
 
-  Widget _buildLangControls(BuildContext context) {
-    final style = Theme.of(context).textTheme.titleLarge;
+@visibleForTesting
+class LanguageSelector extends StatelessWidget {
+  final List<String> locales;
+  final String? selectedLocale;
+  final ValueChanged<String> selectionCallback;
+
+  const LanguageSelector({
+    Key? key,
+    required this.locales,
+    this.selectedLocale,
+    required this.selectionCallback,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     final items = List<Widget>.generate(
       locales.length,
       (int index) {
         return ChoiceChip(
           label: Text(
             locales[index],
-            style: style,
           ),
           selected: locales[index] == selectedLocale,
           onSelected: (bool selected) {

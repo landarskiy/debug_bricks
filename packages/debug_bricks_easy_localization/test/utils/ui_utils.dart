@@ -1,3 +1,4 @@
+import 'package:debug_bricks_easy_localization/debug_bricks_easy_localization.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -42,7 +43,21 @@ class TestLoader extends AssetLoader {
     const Map<String, dynamic> ru = {
       'value': 'ru',
     };
-    final Map<String, Map<String, dynamic>> mapLocales = {"en": en, "ru": ru};
+    final Map<String, Map<String, dynamic>> mapLocales = {'en': en, 'ru': ru};
     return Future.value(mapLocales[locale.toString()]);
+  }
+}
+
+class ContextConsumer extends StatelessWidget {
+  final Function(BuildContext context) consumer;
+
+  const ContextConsumer({Key? key, required this.consumer}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    consumer(context);
+    return const EasyLocalizationBrick(
+      title: 'T',
+    );
   }
 }

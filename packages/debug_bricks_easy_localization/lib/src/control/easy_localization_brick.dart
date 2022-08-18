@@ -2,6 +2,8 @@ import 'package:debug_bricks_ui/debug_bricks_ui.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
+/// Widget which allows change app language.
+/// This widget based on easy_localization package.
 class EasyLocalizationBrick extends StatelessWidget {
   const EasyLocalizationBrick({
     Key? key,

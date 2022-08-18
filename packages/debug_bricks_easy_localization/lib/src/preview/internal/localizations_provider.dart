@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
+/// Provider that controls representation state.
 class LocalizationsProvider extends ChangeNotifier {
   final Map<String, Map<String, dynamic>> mapLocales;
   LocalizationState _localizationState = LocalizationState();
@@ -10,23 +11,30 @@ class LocalizationsProvider extends ChangeNotifier {
     _processData();
   }
 
-  changeLocale(String? locale) {
-    _processData(
+  /// Trigger changing locale in [LocalizationState]
+  Future<void> changeLocale(String? locale) {
+    return _processData(
       locale: locale,
       keySortOrder: localizationState.keySortOrder,
       valueSortOrder: localizationState.valueSortOrder,
     );
   }
 
-  changeKeySortOrder() {
-    _processData(
+  /// Trigger changing sort order in [LocalizationState.translations]
+  /// by [TranslationPair.key] value.
+  /// See [SortOrder.next] to understand which value will be next.
+  Future<void> changeKeySortOrder() {
+    return _processData(
       locale: localizationState.selectedLocale,
       keySortOrder: localizationState.keySortOrder.next(),
     );
   }
 
-  changeValueSortOrder() {
-    _processData(
+  /// Trigger changing sort order in [LocalizationState.translations]
+  /// by [TranslationPair.value] value.
+  /// See [SortOrder.next] to understand which value will be next.
+  Future<void> changeValueSortOrder() {
+    return _processData(
       locale: localizationState.selectedLocale,
       valueSortOrder: localizationState.valueSortOrder.next(),
     );
@@ -94,13 +102,31 @@ class LocalizationsProvider extends ChangeNotifier {
 
 typedef _Extractor<T, E> = Comparable<E> Function(T input);
 
+/// Translation pair
 class TranslationPair {
   final String key;
   final dynamic value;
 
   TranslationPair(this.key, this.value);
+
+  @override
+  String toString() {
+    return 'TranslationPair{key: $key, value: $value}';
+  }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is TranslationPair &&
+          runtimeType == other.runtimeType &&
+          key == other.key &&
+          value == other.value;
+
+  @override
+  int get hashCode => key.hashCode ^ value.hashCode;
 }
 
+/// Localization UI state
 class LocalizationState {
   final String? selectedLocale;
   final List<TranslationPair> translations;
@@ -115,13 +141,39 @@ class LocalizationState {
     this.keySortOrder = SortOrder.neutral,
     this.valueSortOrder = SortOrder.neutral,
   });
+
+  @override
+  String toString() {
+    return 'LocalizationState{selectedLocale: $selectedLocale, translations: $translations, locales: $locales, keySortOrder: $keySortOrder, valueSortOrder: $valueSortOrder}';
+  }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is LocalizationState &&
+          runtimeType == other.runtimeType &&
+          selectedLocale == other.selectedLocale &&
+          listEquals(translations, other.translations) &&
+          listEquals(locales, other.locales) &&
+          keySortOrder == other.keySortOrder &&
+          valueSortOrder == other.valueSortOrder;
+
+  @override
+  int get hashCode =>
+      selectedLocale.hashCode ^
+      translations.hashCode ^
+      locales.hashCode ^
+      keySortOrder.hashCode ^
+      valueSortOrder.hashCode;
 }
 
+/// Sort order
 enum SortOrder {
   neutral,
   ascent,
   descent;
 
+  /// Return next value in declaration order
   SortOrder next() {
     final nextIndex = (index + 1) % SortOrder.values.length;
     return SortOrder.values[nextIndex];

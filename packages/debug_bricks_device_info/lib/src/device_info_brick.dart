@@ -1,4 +1,5 @@
 import 'package:debug_bricks_core/debug_bricks_core.dart';
+import 'package:debug_bricks_device_info/src/device_info_source.dart';
 import 'package:debug_bricks_ui/debug_bricks_ui.dart';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,7 @@ class DeviceInfoBrick extends StatelessWidget {
 
   @visibleForTesting
   DeviceInfoProvider createProvider() {
-    return DeviceInfoProvider();
+    return DeviceInfoProvider(DeviceInfoSource());
   }
 }
 
@@ -70,7 +71,7 @@ class DeviceInfoAdapter {
     } else if (deviceInfo is IosDeviceInfo) {
       final model = '${deviceInfo.model} (${deviceInfo.name})';
       final os =
-          'iOS ${deviceInfo.utsname.release} (${deviceInfo.utsname.version} )';
+          'iOS ${deviceInfo.utsname.release} (${deviceInfo.utsname.version})';
       return '$model\n$os';
     } else if (deviceInfo is WindowsDeviceInfo) {
       return 'Windows ${deviceInfo.computerName}';

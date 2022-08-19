@@ -7,12 +7,18 @@ import 'util/ui_util.dart';
 
 void main() {
   testWidgets('DeviceInfoBrick widget test', (tester) async {
+    var consumed = false;
     await tester.pumpWidgetWithMaterial(
       DeviceInfoBrick(
         title: 'T',
+        onTap: (info) {
+          consumed = true;
+        },
       ),
     );
     expect(find.text('T'), findsOneWidget);
+    await tester.tap(find.byType(DeviceInfoBrick));
+    expect(consumed, true);
   });
 
   test('DeviceInfoAdapter test', () {
@@ -109,6 +115,18 @@ void main() {
       'Web ${BrowserName.chrome.name}',
     );
 
+    expect(adapter.convert(NewDeviceInfo()), 'k: v\nk2: v2');
     expect(adapter.convert(null), 'No device info found');
+    expect(
+      const FullDeviceInfoAdapter().convert(NewDeviceInfo()),
+      'k: v\nk2: v2',
+    );
   });
+}
+
+class NewDeviceInfo implements BaseDeviceInfo {
+  @override
+  Map<String, dynamic> toMap() {
+    return {'k': 'v', 'k2': 'v2'};
+  }
 }

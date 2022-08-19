@@ -24,7 +24,7 @@ class DeviceInfoBrick extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<DeviceInfoProvider>(
-      create: (_) => createProvider(),
+      create: (_) => DeviceInfoProvider(DeviceInfoSource()),
       builder: (context, _) {
         final provider = context.watch<DeviceInfoProvider>();
         final deviceInfo = provider.cachedDeviceInfo;
@@ -42,11 +42,6 @@ class DeviceInfoBrick extends StatelessWidget {
         );
       },
     );
-  }
-
-  @visibleForTesting
-  DeviceInfoProvider createProvider() {
-    return DeviceInfoProvider(DeviceInfoSource());
   }
 }
 

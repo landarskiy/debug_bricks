@@ -1,5 +1,9 @@
+import 'package:debug_bricks_easy_localization/debug_bricks_easy_localization.dart';
 import 'package:debug_bricks_easy_localization/src/preview/internal/localizations_provider.dart';
+import 'package:debug_bricks_easy_localization/src/preview/internal/table_item_header.dart';
 import 'package:flutter_test/flutter_test.dart';
+
+import '../utils/ui_utils.dart';
 
 void main() {
   _compareStates(
@@ -99,5 +103,38 @@ void main() {
         ],
       ),
     );
+  });
+
+  testWidgets('TableItemHeader widget test', (tester) async {
+    var keyClicked = false;
+    keyListener(SortOrder sortOrder) {
+      keyClicked = true;
+    }
+
+    var valueClicked = false;
+    valueListener(SortOrder sortOrder) {
+      valueClicked = true;
+    }
+
+    await tester.pumpWidgetWithMaterial(
+      TableItemHeader(
+        resourcesProvider: const ResourcesProvider(),
+        keySortOrder: SortOrder.neutral,
+        valueSortOrder: SortOrder.neutral,
+        keySortOrderCallback: keyListener,
+        valueSortOrderCallback: valueListener,
+      ),
+    );
+
+    expect(find.text('Key'), findsOneWidget);
+    expect(find.text('Value'), findsOneWidget);
+    expect(keyClicked, false);
+    await tester.tap(find.text('Key'));
+    await tester.pumpAndSettle();
+    expect(keyClicked, true);
+    expect(valueClicked, false);
+    await tester.tap(find.text('Value'));
+    await tester.pumpAndSettle();
+    expect(valueClicked, true);
   });
 }

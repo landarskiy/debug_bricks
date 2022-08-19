@@ -7,8 +7,12 @@ const localeEn = Locale('en');
 const localeRu = Locale('ru');
 
 extension WidgetTesterExtension on WidgetTester {
-  Future<void> pumpWidgetWithMaterial(Widget widget) {
+  Future<void> pumpWidgetWithMaterialEasyLocalization(Widget widget) {
     return pumpWidget(wrapEasyLocalization(wrapMaterial(widget)));
+  }
+
+  Future<void> pumpWidgetWithMaterial(Widget widget) {
+    return pumpWidget(wrapMaterial(widget));
   }
 }
 

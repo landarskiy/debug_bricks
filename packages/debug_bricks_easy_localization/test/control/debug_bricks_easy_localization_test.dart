@@ -14,7 +14,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     EasyLocalization.logger.enableBuildModes = [];
     await EasyLocalization.ensureInitialized();
-    await tester.pumpWidgetWithMaterial(
+    await tester.pumpWidgetWithMaterialEasyLocalization(
       ContextConsumer(
         consumer: (context) {
           _context = context;

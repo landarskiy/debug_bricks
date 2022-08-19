@@ -14,6 +14,10 @@ class FcmTokenSource {
     return _fbMessaging.getToken();
   }
 
+  Stream<String> get onTokenRefresh {
+    return _fbMessaging.onTokenRefresh;
+  }
+
   factory FcmTokenSource() => _instance;
 
   FcmTokenSource._internal() {

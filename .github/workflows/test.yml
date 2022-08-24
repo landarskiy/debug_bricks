@@ -55,6 +55,11 @@ jobs:
         cd ./packages/debug_bricks_fcm_token/
         flutter test
 
+    - name: Run tests debug_bricks_theme_info
+      run: |
+        cd ./packages/debug_bricks_theme_info/ 
+        flutter test
+    
     - name: Run tests coverage debug_bricks_core
       run: |
         cd ./packages/debug_bricks_core/ 
@@ -78,9 +83,14 @@ jobs:
     - name: Run tests coverage debug_bricks_fcm_token
       run: |
         cd ./packages/debug_bricks_fcm_token/ 
+        flutter test --coverage
+
+    - name: Run tests coverage debug_bricks_theme_info
+      run: |
+        cd ./packages/debug_bricks_theme_info/ 
         flutter test --coverage    
     
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
-        files: ./packages/debug_bricks_core/coverage/lcov.info,./packages/debug_bricks_ui/coverage/lcov.info,./packages/debug_bricks_device_info/coverage/lcov.info,./packages/debug_bricks_easy_localization/coverage/lcov.info,./packages/debug_bricks_fcm_token/coverage/lcov.info
+        files: ./packages/debug_bricks_core/coverage/lcov.info,./packages/debug_bricks_ui/coverage/lcov.info,./packages/debug_bricks_device_info/coverage/lcov.info,./packages/debug_bricks_easy_localization/coverage/lcov.info,./packages/debug_bricks_fcm_token/coverage/lcov.info,./packages/debug_bricks_theme_info/coverage/lcov.info

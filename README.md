@@ -1,5 +1,7 @@
 ![LOGO](https://github.com/touchlane/debug_bricks/raw/master/doc/media/logo.svg)
 
+[![codecov](https://codecov.io/gh/touchlane/debug_bricks/branch/master/graph/badge.svg?token=MIUHAFNRPI)](https://codecov.io/gh/touchlane/debug_bricks)
+
 Set of UI components for debug screens.
 
 # Components

@@ -4,18 +4,18 @@ import 'package:flutter/material.dart';
 import 'device_info_source.dart';
 
 class DeviceInfoProvider extends ChangeNotifier {
-  final DeviceInfoSource deviceInfoSource = DeviceInfoSource();
+  final DeviceInfoSource _deviceInfoSource;
 
   BaseDeviceInfo? get cachedDeviceInfo {
-    return deviceInfoSource.cachedDeviceInfo;
+    return _deviceInfoSource.cachedDeviceInfo;
   }
 
-  DeviceInfoProvider() {
+  DeviceInfoProvider(this._deviceInfoSource) {
     _loadDeviceInfo();
   }
 
   _loadDeviceInfo() async {
-    await deviceInfoSource.deviceInfoFuture;
+    await _deviceInfoSource.deviceInfoFuture;
     notifyListeners();
   }
 }

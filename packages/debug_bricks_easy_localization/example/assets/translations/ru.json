@@ -2,5 +2,8 @@
   "app_name": "Пример Debug brick Easy Localization",
   "language": "Язык",
   "theme_to_dark": "Переключиться на тёмную",
-  "theme_to_light": "Переключиться на светлую"
+  "theme_to_light": "Переключиться на светлую",
+  "localizations_title": "Ключи",
+  "localizations_table_column_key": "Ключ",
+  "localizations_table_column_value": "Значение"
 }

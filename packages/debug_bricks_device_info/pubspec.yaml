@@ -1,6 +1,6 @@
 name: debug_bricks_device_info
 description: Device info UI debug brick
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/touchlane/debug_bricks
 repository: https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_device_info
 
@@ -14,15 +14,15 @@ dependencies:
   provider: ^6.0.0
   device_info_plus: ^4.0.1
 
-#  RELEASE
-#  debug_bricks_core: ^0.0.2
-#  debug_bricks_ui: ^0.0.2
+  #  RELEASE
+  debug_bricks_core: ^0.0.2
+  debug_bricks_ui: ^0.0.2
 
-#  DEVELOPMENT
-  debug_bricks_core:
-    path: ../debug_bricks_core
-  debug_bricks_ui:
-    path: ../debug_bricks_ui
+  #  DEVELOPMENT
+  #debug_bricks_core:
+  #  path: ../debug_bricks_core
+  #debug_bricks_ui:
+  #  path: ../debug_bricks_ui
 
 dev_dependencies:
   flutter_test:

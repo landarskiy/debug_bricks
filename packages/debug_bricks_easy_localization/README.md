@@ -17,6 +17,8 @@ dependencies:
 
 ## Usage
 
+### EasyLocalizationBrick
+
 ![TextBrick](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_easy_localization/doc/media/language_control_light.png)
 
 ![TextBrick](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_easy_localization/doc/media/language_control_dark.png)
@@ -36,7 +38,7 @@ class DebugScreen extends StatelessWidget {
 }
 ```
 
-## Customization
+#### Customization
 
 You can customize output by pass custom `localeAdapter` instance in `EasyLocalizationBrick`
 instantiation.
@@ -48,5 +50,39 @@ class CustomLocaleAdapter {
   String convert(Locale locale) {
     //format locale here
   }
+}
+```
+
+### LocalizationsTable
+
+![LocalizationsTable](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_easy_localization/doc/media/language_keys.png)
+
+```dart
+import 'package:debug_bricks_easy_localization/debug_bricks_easy_localization.dart';
+
+class DebugScreen extends StatelessWidget {
+  const DebugScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    LocalizationsTable(
+        mapLocales: CodegenLoader.mapLocales,
+    );
+  }
+}
+```
+
+#### Customization
+
+You can customize UI translations by pass custom `ResourcesProvider` class into
+`LocalizationsTable` constructor by `resourcesProvider` argument.
+
+```dart
+class AppResourcesProvider extends ResourcesProvider {
+  @override
+  String get titleKey => LocaleKeys.localizations_table_column_key.tr();
+
+  @override
+  String get titleValue => LocaleKeys.localizations_table_column_value.tr();
 }
 ```

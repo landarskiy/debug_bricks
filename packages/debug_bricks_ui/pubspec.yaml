@@ -1,6 +1,6 @@
 name: debug_bricks_ui
 description: UI components for debug purposes
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/touchlane/debug_bricks
 repository: https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_ui
 

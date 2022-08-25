@@ -1,6 +1,6 @@
 name: debug_bricks_easy_localization
 description: Easy Localization UI debug brick
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/touchlane/debug_bricks
 repository: https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_easy_localization
 
@@ -11,17 +11,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^6.0.0
   easy_localization: ^3.0.1
 
 #  RELEASE
-#  debug_bricks_core: ^0.0.2
-#  debug_bricks_ui: ^0.0.2
+debug_bricks_core: ^0.0.3
+debug_bricks_ui: ^0.0.3
 
 #  DEVELOPMENT
-  debug_bricks_core:
-    path: ../debug_bricks_core
-  debug_bricks_ui:
-    path: ../debug_bricks_ui
+#  debug_bricks_core:
+#    path: ../debug_bricks_core
+#  debug_bricks_ui:
+#    path: ../debug_bricks_ui
 
 dev_dependencies:
   flutter_test:

@@ -4,6 +4,6 @@ class FcmTokenProviderFactory {
   const FcmTokenProviderFactory();
 
   FcmTokenProvider newInstance() {
-    return FcmTokenProvider();
+    return FcmTokenProvider(FcmTokenSource());
   }
 }

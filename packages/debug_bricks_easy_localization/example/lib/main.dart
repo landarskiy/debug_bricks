@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'generated/codegen_loader.g.dart';
+import 'localizations.dart';
 
 const langEn = Locale('en');
 const langRu = Locale('ru');
@@ -75,7 +76,10 @@ class DemoPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(LocaleKeys.app_name.tr()),
-        actions: [_buildThemeButton(context)],
+        actions: [
+          _buildThemeButton(context),
+          _buildLocalizationsButton(context),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -110,5 +114,18 @@ class DemoPage extends StatelessWidget {
         },
       );
     }
+  }
+
+  Widget _buildLocalizationsButton(BuildContext context) {
+    return IconButton(
+      icon: const Icon(Icons.language),
+      tooltip: LocaleKeys.localizations_title.tr(),
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const LocalizationsScreen()),
+        );
+      },
+    );
   }
 }

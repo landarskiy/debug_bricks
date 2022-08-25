@@ -15,8 +15,8 @@ dependencies:
   easy_localization: ^3.0.1
 
 #  RELEASE
-debug_bricks_core: ^0.0.3
-debug_bricks_ui: ^0.0.3
+  debug_bricks_core: ^0.0.3
+  debug_bricks_ui: ^0.0.3
 
 #  DEVELOPMENT
 #  debug_bricks_core:

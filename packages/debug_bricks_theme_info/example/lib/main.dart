@@ -58,7 +58,7 @@ class DemoPage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: const <Widget>[
             ThemeColorInfoBrick(),
           ],
         ),

@@ -50,11 +50,13 @@ Functional UI component that displays FCM token.
 
 Functional UI component that provides possibility to change app locale.
 Under the hood work with [easy_localization](https://pub.dev/packages/easy_localization)
-package.
+package. Also you can display table with all trnslations.
 
 ![EasyLocalizationBrick](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_easy_localization/doc/media/language_control_light.png)
 
 ![EasyLocalizationBrick](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_easy_localization/doc/media/language_control_dark.png)
+
+![LocalizationsTable](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_easy_localization/doc/media/language_keys.png)
 
 ### Platform Support
 
@@ -89,3 +91,21 @@ always can if you feel that this small simplification meets your requirements.
 [Integration guide](packages/debug_bricks_ui/README.md)
 
 [Source code](packages/debug_bricks_ui)
+
+## Theme Info
+
+Non-functional UI component that provides possibility to see all Material Theme 3 colors.
+
+![ThemeColorInfoBrick](https://github.com/touchlane/debug_bricks/raw/master/packages/debug_bricks_theme_info/doc/media/theme_color_info.png)
+
+### Platform Support
+
+| Android | iOS | MacOS | Web | Linux | Windows |
+| :-----: | :-: | :---: | :-: | :---: | :-----: |
+|   ✔️    | ✔️  |  ✔️   | ✔️  |  ✔️   |   ✔️    |
+
+### Integration
+
+[Integration guide](packages/debug_bricks_theme_info/README.md)
+
+[Source code](packages/debug_bricks_theme_info)

@@ -37,8 +37,12 @@ void main() {
 
   testWidgets('ExpandedColorInfoBrick widget test', (tester) async {
     await tester.pumpWidgetWithMaterial(
-      ExpandedColorInfoBrick(
-        colorInfo: ColorInfo('N', Colors.white, Colors.red),
+      Row(
+        children: [
+          ExpandedColorInfoBrick(
+            colorInfo: ColorInfo('N', Colors.white, Colors.red),
+          ),
+        ],
       ),
     );
     expect(find.text('N'), findsOneWidget);

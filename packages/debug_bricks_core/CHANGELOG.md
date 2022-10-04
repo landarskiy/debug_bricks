@@ -1,3 +1,7 @@
+## 1.0.0
+
+* Update dependencies
+
 ## 0.0.3
 
 * New components

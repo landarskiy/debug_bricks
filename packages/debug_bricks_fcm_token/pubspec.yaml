@@ -1,11 +1,11 @@
 name: debug_bricks_fcm_token
 description: FCM Token UI debug brick
-version: 0.0.3
+version: 1.0.0
 homepage: https://github.com/touchlane/debug_bricks
 repository: https://github.com/touchlane/debug_bricks/tree/master/packages/debug_bricks_fcm_token
 
 environment:
-  sdk: ">=2.17.6 <3.0.0"
+  sdk: ">=2.18.1 <3.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
@@ -13,11 +13,11 @@ dependencies:
     sdk: flutter
   provider: ^6.0.0
   firebase_core: ^1.20.0
-  firebase_messaging: ^12.0.1
+  firebase_messaging: ^13.0.3
 
 #  RELEASE
-  debug_bricks_core: ^0.0.3
-  debug_bricks_ui: ^0.0.3
+  debug_bricks_core: ^1.0.0
+  debug_bricks_ui: ^1.0.0
 
 #  DEVELOPMENT
 #  debug_bricks_core:
